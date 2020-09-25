@@ -1,0 +1,100 @@
+Source: sonic-pi
+Section: sound
+Priority: optional
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Uploaders:
+ Hanno Zulla <kontakt@hanno.de>,
+ Georges Khaznadar <georgesk@debian.org>,
+ Petter Reinholdtsen <pere@debian.org>,
+ Valentin Vidic <vvidic@debian.org>
+Build-Depends:
+ cmake,
+ debhelper-compat (= 12),
+ erlang-base,
+ libaubio5,
+ libboost-dev,
+ libqscintilla2-qt5-dev,
+ libqt5opengl5-dev,
+ libqt5svg5-dev,
+ pkg-config,
+ qtbase5-dev,
+ qttools5-dev,
+ qttools5-dev-tools,
+ rake,
+ ruby,
+ ruby-activesupport,
+ ruby-all-dev,
+ ruby-aubio,
+ ruby-benchmark-ips,
+ ruby-hamster,
+ ruby-kramdown,
+ ruby-minitest,
+ ruby-mocha,
+ ruby-multi-json,
+ ruby-rubame,
+ ruby-rugged,
+ ruby-wavefile (>= 0.6.0-2),
+ sc3-plugins-server,
+Standards-Version: 4.5.0
+Homepage: https://sonic-pi.net/
+Vcs-Browser: https://salsa.debian.org/multimedia-team/sonic-pi
+Vcs-Git: https://salsa.debian.org/multimedia-team/sonic-pi.git
+
+Package: sonic-pi
+Architecture: i386 amd64 arm64 armhf mipsel
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ sonic-pi-server (= ${source:Version}),
+ alsa-utils
+Description: Live Coding for Everyone
+ A free live coding synth for everyone. Originally designed to support
+ computing and music lessons within schools. Use code to compose and
+ perform in classical and contemporary styles ranging from Canons to
+ Dubstep.
+
+Package: sonic-pi-server
+Architecture: all
+Depends:
+ ${misc:Depends},
+ erlang-base,
+ jackd,
+ ruby,
+ ruby-activesupport,
+ ruby-aubio,
+ ruby-hamster,
+ ruby-kramdown,
+ ruby-memoist,
+ ruby-multi-json,
+ ruby-rubame,
+ ruby-rugged,
+ ruby-sys-proctable,
+ ruby-treetop,
+ ruby-wavefile,
+ sc3-plugins-server,
+ sonic-pi-samples (= ${source:Version}),
+ supercollider-server,
+Suggests:
+ sonic-pi-server-doc
+Description: Backend server for Sonic Pi
+ The Sonic Pi backend server connects to SuperCollider to play synths
+ and samples. Advanced users may want to use the server for experiments
+ without the graphical user interface provided by the sonic-pi package.
+
+Package: sonic-pi-server-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}
+Description: Documentation for Sonic Pi
+ These are the Markdown source files and a converted HTML version of
+ the Sonic Pi main documentation. If you installed the sonic-pi IDE
+ package, you propably don't need this package, as a copy of the
+ documentation is already included within the application.
+
+Package: sonic-pi-samples
+Architecture: all
+Depends: ${misc:Depends}
+Description: Audio samples for Sonic Pi
+ Sonic Pi is shipped with a default audio sample collection, containing
+ musical snippets, sound effects and rhythm loops created by various
+ contributors at freesound.org.

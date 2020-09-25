@@ -1,0 +1,9 @@
+Document: sonic-pi-tutorial
+Title: Sonic Pi Tutorial
+Abstract: A step-by-step tutorial to Sonic Pi.
+ Learn how to code music, at home, at school, on stage.
+Section: Programming/Ruby
+
+Format: HTML
+Index: /usr/share/doc/sonic-pi/tutorial/index.html
+Files: /usr/share/doc/sonic-pi/tutorial/*.html

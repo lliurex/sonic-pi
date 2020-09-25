@@ -1,0 +1,14 @@
+#!/bin/sh
+
+LOG=$AUTOPKGTEST_TMP/log
+
+jackd --no-realtime -ddummy -r48000 -p1024 &
+/usr/lib/sonic-pi/app/server/ruby/bin/sonic-pi-server.rb 2>&1 | tee $LOG &
+
+for i in $(seq 1 10); do
+  if grep -q 'Sonic Pi Server successfully booted' $LOG; then
+    exit 0
+  fi
+  sleep 1
+done
+exit 1

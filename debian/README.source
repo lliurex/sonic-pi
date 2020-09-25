@@ -1,0 +1,104 @@
+Hello, fellow Debian packager!
+
+Sonic Pi is developed at <https://github.com/samaaron/sonic-pi/> by
+Sam Aaron and a group of collaborators. Releases are tagged in git
+and published as source tarballs.
+
+Upstream releases binaries for Raspbian, OS X and Windows.
+
+While Raspbian on the Raspberry Pi is a primary development target,
+the .deb package for that platform doesn't comply to the Debian
+packaging rules. Therefore, this package here attempts to change that
+and bring Sonic Pi to the Debian & Ubuntu archives.
+
+The upstream git repository contains some unused code and you will
+stumble over some quirks. These are briefly described here, so that
+you can understand the packaging decisions made for Debian.
+
+Sonic Pi consists of two parts.
+
+The frontend is a full, easy-to-use IDE. It is written in C++ using Qt
+and QScintilla. It comes with an included tutorial and reference.
+
+The backend is a server written in Ruby. It connects to SuperCollider
+as a synthesizer engine and controls the playback of synths and samples.
+
+Here's a small tour to the most important files in the upstream repo
+on github:
+
+* ./app/gui/qt/
+
+  The Qt-based GUI frontend written in C++, including translation files
+  and image assets. There are three build scripts, for Win, OS X and
+  Raspbian each. The Raspbian build script ./app/gui/qt/rp-build-app
+  served as the template for debian/rules. During build, a ruby helper
+  script converts the tutorial and language reference files and also
+  creates some include files needed for the Qt application.
+
+* ./app/gui/html/
+
+  A web frontend to the ruby server. Currently not maintained, not
+  used in Debian and removed from the source package prior to upload.
+
+* ./app/server/bin/sonic-pi-server.rb
+
+  The main ruby application to start the backend server.
+
+* ./app/server/sonicpi/lib/
+
+  The backend server code, written in Ruby.
+
+* ./app/server/sonicpi/test/
+
+  A set of test scripts. The Debian build script will run these to
+  make sure the Debian gems are compatible. Packaging fails if the
+  test suite fails.
+  
+* ./app/server/vendor/
+
+  Copies of ruby gems that upstream bundles with Sonic Pi binaries.
+  Many of these aren't actually used yet, but included in the git repo
+  anyway, as upstream wants to use them in the near future. For the
+  Debian package, all gems in vendor/ are removed, except...
+
+* ./app/server/vendor/ruby-beautify/
+
+  ...which is a legacy version of that gem. Please read
+  ./debian/patches/04-rename-ruby-beautify-legacy.patch for more about
+  this particular gem and why the embedded source copy was necessairy
+  for Debian packaging.
+
+* ./app/server/native/
+
+  Sonic Pi needs the SC3 plugins collection for SuperCollider and
+  upstream includes precompiled binaries of these plugins for OS X
+  and Raspbian in the tarball. For Debian, these have been removed and
+  replaced with a dependency to a dedicated sc3-plugins package.
+
+* ./etc/doc/samples/
+
+  The default collection of audio samples shipped with Sonic Pi.
+
+* ./etc/synthdefs/
+
+  The synth definitions for Sonic Pi, written in Clojure using
+  Overtone. The compiled definitions are also included in the git repo
+  and shipped in ./etc/synthdefs/compiled/
+  
+* ./etc/doc/wavetables/
+
+  A collection of wavetable synth samples. Not yet used in Sonic Pi,
+  planned for later development. Currently not used in Debian and
+  removed from the source package prior to upload.
+
+Finally, there are several project README and other documentation
+files written in markdown or HTML scattered around the tarball. These
+are mostly relevant to developers wishing to work on the Sonic Pi
+sources, so they have been omitted in the Debian package. Instead,
+there is ./debian/extra/README, which is a hand-edited, condensed
+version of upstream's ./README.md, ./CONTRIBUTORS.md and ./CORETEAM.html
+which need to be tracked by you for content updates on major releases.
+
+Thank you.
+
+(written in February, 2016)

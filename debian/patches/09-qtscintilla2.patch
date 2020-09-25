@@ -1,0 +1,26 @@
+Description: Build using QScintilla from packages
+Forwarded: not-needed
+Author: Valentin Vidic <vvidic@debian.org>
+Last-Update: 2020-09-20
+
+--- a/app/gui/qt/CMakeLists.txt
++++ b/app/gui/qt/CMakeLists.txt
+@@ -46,9 +46,6 @@
+ find_package(Qt5 COMPONENTS Core Widgets Gui Concurrent Network OpenGL PrintSupport Xml Svg REQUIRED)
+ find_package(Threads REQUIRED)
+ 
+-# We build scintilla as part of the main project to make it easy to debug/fix
+-add_subdirectory(external/QScintilla-2.11.4)
+-
+ set(APP_NAME sonic-pi)
+ 
+ set(OSC_SOURCES
+@@ -136,7 +133,7 @@
+ 
+ target_link_libraries(${APP_NAME}
+     PRIVATE
+-    QScintilla
++    qscintilla2_qt5
+     Qt5::Core 
+     Qt5::Gui 
+     Qt5::Widgets

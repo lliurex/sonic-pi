@@ -1,0 +1,82 @@
+Description: use Debian gems instead of upstream's embedded code copies
+ Upstream ships Sonic Pi for Win, OS X and Raspbian and distributes all
+ gems needed by the ruby server within the app/server/vendor/ directory
+ in the source tarball. Debian wants packagers not to use these embedded
+ code copies, but to use Debian's packaged ruby gems instead. This
+ patch removes the code that added the vendor/ directory to the ruby
+ library path. Do note that many of the gems provided by upstream
+ aren't actually used in Sonic Pi, see
+ <URL: https://github.com/samaaron/sonic-pi/issues/928> for details.
+Forwarded: not-needed
+Author: Hanno Zulla <kontakt@hanno.de>
+Last-Update: 2016-01-22
+
+--- a/app/server/ruby/core.rb
++++ b/app/server/ruby/core.rb
+@@ -12,20 +12,8 @@
+ # notice is included.
+ #++
+ 
+-## This core file sets up the load path and applies any necessary monkeypatches.
+-
+ raise "Sonic Pi requires Ruby 2.4+ to be installed. You are using version #{RUBY_VERSION}" if RUBY_VERSION < "2.4"
+ 
+-## Ensure native lib dir is available
+-require 'rbconfig'
+-ruby_api = RbConfig::CONFIG['ruby_version']
+-
+-
+-## Ensure all libs in vendor directory are available
+-Dir["#{File.expand_path("../vendor", __FILE__)}/*/lib/"].each do |vendor_lib|
+-  $:.unshift vendor_lib
+-end
+-
+ begin
+   require 'did_you_mean'
+ rescue LoadError
+@@ -34,45 +22,6 @@
+ 
+ require 'wavefile'
+ 
+-os = case RUBY_PLATFORM
+-     when /.*arm.*-linux.*/
+-       :raspberry
+-     when /.*linux.*/
+-       :linux
+-     when /.*darwin.*/
+-       :osx
+-     when /.*mingw.*/
+-       :windows
+-     else
+-       RUBY_PLATFORM
+-     end
+-
+-# special case for proctable lib
+-sys_proctable_os = case os
+-                   when :raspberry
+-                     "linux"
+-                   when :linux
+-                     "linux"
+-                   when :windows
+-                     "windows"
+-                   when :osx
+-                     "darwin"
+-                   end
+-$:.unshift "#{File.expand_path("../vendor", __FILE__)}/sys-proctable-1.1.3/lib/#{sys_proctable_os}"
+-
+-
+-$:.unshift "#{File.expand_path("../rb-native", __FILE__)}/#{ruby_api}/"
+-
+-
+-## Add aubio native library to ENV if not present (the aubio library needs to be told the location)
+-native_lib_path = File.expand_path("../../native/", __FILE__)
+-ENV["AUBIO_LIB"] ||= Dir[native_lib_path + "/lib/libaubio*.{*dylib,so*,dll}"].first
+-
+-
+-
+-
+-
+-
+ module SonicPi
+   module Core
+     class ThreadLocal

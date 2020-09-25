@@ -1,0 +1,22 @@
+#!/bin/sh
+
+Xvfb -shmem -screen 0 1280x1024x24 2>&1 &
+jackd --no-realtime -ddummy -r48000 -p1024 &
+
+for i in $(seq 1 10); do
+  if xwininfo -root 2>/dev/null; then
+    break
+  fi
+  sleep 1
+done
+
+export DISPLAY=:0
+sonic-pi 2>&1 &
+
+for i in $(seq 1 10); do
+  if xwininfo -tree -root | grep "Sonic Pi.*+0+0"; then
+    exit 0
+  fi
+  sleep 1
+done
+exit 1

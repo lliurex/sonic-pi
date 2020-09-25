@@ -1,0 +1,102 @@
+sonic-pi (3.2.2~repack-2) bionic; urgency=medium
+
+  * Bionic port from debian
+
+ -- M.Angel Juan <m.angel.juan@gmail.com>  Fri, 25 Sep 2020 10:30:18 +0200
+
+sonic-pi (3.2.2~repack-2) unstable; urgency=medium
+
+  * Enable Salsa CI
+  * Fix ruby dependencies
+  * Add autopkgtest for server and gui
+  * Fix deprecated file existence check
+
+ -- Valentin Vidic <vvidic@debian.org>  Sun, 20 Sep 2020 23:33:33 +0200
+
+sonic-pi (3.2.2~repack-1) unstable; urgency=medium
+
+  * New upstream version 3.2.2~repack (Closes: #931144)
+  * Prepare Files-Excluded for import of new version
+  * Update patches for new version
+  * Update dependencies for new version
+  * Update copyright paths for new version
+  * Update build rules for new version
+  * Update installation paths for new version
+  * Update Lintian overrides for new version
+  * Add myself to Uploaders
+
+ -- Valentin Vidic <vvidic@debian.org>  Sun, 20 Sep 2020 12:28:19 +0200
+
+sonic-pi (2.10.0~repack-3) unstable; urgency=medium
+
+  * changed Architecture: any to
+    Architecture: i386 amd64 arm64 armhf mipsel to comply with architectures
+    supported by the build-dependency supercollider-dev
+  * udated Standards-Version: 4.5.0 , and dehelper-compat =12
+  * replaced the dependency on libqt5scintilla2-dev => libqscintilla2-qt5-dev
+    and the clause -lqt5scintilla2 => -lqscintilla2_qt5
+  * fixed the deprecated calls to QString.sprinf. Closes: #964659
+
+ -- Georges Khaznadar <georgesk@debian.org>  Fri, 21 Aug 2020 19:05:19 +0200
+
+sonic-pi (2.10.0~repack-2) unstable; urgency=medium
+
+  [ Hanno Zulla ]
+  * Add missing examples/ directory for Debian distribution package.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Tue, 17 May 2016 18:16:41 +0000
+
+sonic-pi (2.10.0~repack-1) unstable; urgency=medium
+
+  [ Hanno Zulla ]
+  * New upstream release 2.10 - 'Cowbell'.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Mon, 18 Apr 2016 09:37:11 +0000
+
+sonic-pi (2.9.0~repack-6) unstable; urgency=medium
+
+  * Build-depend on a version of ruby-wavefile working with big
+    endian machines.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat, 27 Feb 2016 07:57:23 +0000
+
+sonic-pi (2.9.0~repack-5) unstable; urgency=medium
+
+  [ Hanno Zulla ]
+  * don't load did_you_mean on Debian with ruby < 2.3.0
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 26 Feb 2016 16:50:24 +0100
+
+sonic-pi (2.9.0~repack-4) unstable; urgency=medium
+
+  [ Petter Reinholdtsen ]
+  * Upgraded standards-version from 3.9.6 to 3.9.7.
+  * Fixed typo in debian/copyright (Licence -> License).
+
+  [ Hanno Zulla ]
+  * Build-depend on sc3-plugins-server to avoid building on non-working
+    architectures.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 26 Feb 2016 11:46:23 +0100
+
+sonic-pi (2.9.0~repack-3) unstable; urgency=low
+
+  * debian/copyright: Document zlib license for two hh files.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri, 19 Feb 2016 17:53:06 +0000
+
+sonic-pi (2.9.0~repack-2) unstable; urgency=low
+
+  * Remove duplicate lintian-overrides file.
+  * Use ssl URIs for git repos.
+  * Remove unused library from build-depends.
+
+ -- Hanno Zulla <kontakt@hanno.de>  Fri, 19 Feb 2016 09:37:00 +0100
+
+sonic-pi (2.9.0~repack-1) unstable; urgency=low
+
+  * Initial packaging.
+  * Packaging info in debian/README.source and debian/patches/*.patch.
+  * Closes: #796550.
+
+ -- Hanno Zulla <kontakt@hanno.de>  Fri, 12 Feb 2016 12:08:00 +0100

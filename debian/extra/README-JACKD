@@ -1,0 +1,21 @@
+Sonic Pi needs jackd, the JACK audio connection kit daemon
+
+The JACK audio connection kit is a sound server made for musicians.
+When it works, it's great, but the default configuration fails for some
+users.
+
+If Sonic Pi fails to start for you, first try this:
+
+- make sure you stopped Sonic Pi
+- run qjackctl
+- start the JACK daemon manually through qjackctl
+- then start Sonic Pi again
+
+While jackd is running, other sound applications using ALSA or
+PulseAudio may be blocked. To avoid this while using PulseAudio, you
+can install the package pulseaudio-module-jack and follow these guides
+to set it up:
+
+<http://jackaudio.org/faq/pulseaudio_and_jack.html>
+<http://rivendell.tryphon.org/wiki/Debian_6_Setup_JACK2_with_Pulse_Audio>
+<https://help.ubuntu.com/community/UbuntuStudio/ProAudioIntro/>

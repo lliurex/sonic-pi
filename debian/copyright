@@ -1,0 +1,938 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Sonic Pi
+Upstream-Contact: Samuel Aaron <samaaron@gmail.com>
+Source: https://github.com/samaaron/sonic-pi
+Files-Excluded:
+ .gitignore
+ .travis.yml
+ etc/wavetables
+ app/gui/html
+ app/gui/qt/external/aubio
+ app/gui/qt/external/boost_1_72_0
+ app/gui/qt/external/CMakeLists.txt
+ app/gui/qt/external/externals.cpp
+ app/gui/qt/external/flac_1_3_3
+ app/gui/qt/external/libsndfile
+ app/gui/qt/external/ogg-1.3.4
+ app/gui/qt/external/opus-1.2
+ app/gui/qt/external/osmid
+ app/gui/qt/external/QScintilla-2.11.4
+ app/gui/qt/external/tracy
+ app/gui/qt/external/unix_build_externals.sh
+ app/gui/qt/external/vorbis-1.3.4
+ app/gui/qt/external/win_x64_build_externals.bat
+ app/gui/qt/external/win_x86_build_externals.bat
+ app/server/native
+ app/server/ruby/vendor/activesupport
+ app/server/ruby/vendor/ast-2.0.0
+ app/server/ruby/vendor/atomic
+ app/server/ruby/vendor/benchmark-ips-2.3.0
+ app/server/ruby/vendor/blankslate
+ app/server/ruby/vendor/ffi-1.11.3
+ app/server/ruby/vendor/gettext-3.2.2
+ app/server/ruby/vendor/i18n
+ app/server/ruby/vendor/interception
+ app/server/ruby/vendor/kramdown-2.1.0
+ app/server/ruby/vendor/locale-2.1.2
+ app/server/ruby/vendor/memoist-0.16.2
+ app/server/ruby/vendor/metaclass-0.0.4
+ app/server/ruby/vendor/minitest-5.8.1
+ app/server/ruby/vendor/mocha-1.1.0
+ app/server/ruby/vendor/multi_json
+ app/server/ruby/vendor/narray-0.6.1.1
+ app/server/ruby/vendor/parser-2.2.2.1
+ app/server/ruby/vendor/parslet
+ app/server/ruby/vendor/polyglot-0.3.5
+ app/server/ruby/vendor/rake-compiler-1.1.0
+ app/server/ruby/vendor/rouge
+ app/server/ruby/vendor/rubame
+ app/server/ruby/vendor/ruby-aubio-0.3.3
+ app/server/ruby/vendor/ruby-coreaudio-0.0.12-patched
+ app/server/ruby/vendor/ruby-prof-0.15.8
+ app/server/ruby/vendor/rugged-0.28.4.1
+ app/server/ruby/vendor/sys-proctable-1.2.2
+ app/server/ruby/vendor/text-1.3.1
+ app/server/ruby/vendor/thread_safe
+ app/server/ruby/vendor/treetop
+ app/server/ruby/vendor/wavefile-0.8.1
+ app/server/ruby/vendor/websocket-ruby-1.2.8
+ install
+ prebuilt
+
+Files: *
+Copyright: 2016 Samuel Aaron <samaaron@gmail.com>
+License: MIT
+
+Files:
+ etc/doc/*
+ etc/examples/*
+Copyright:
+ 2016 Samuel Aaron <samaaron@gmail.com>
+License: CC-BY-SA-4.0
+
+Files: etc/examples/illusionist/chord_inversions.rb
+Copyright: Adrian Cheater
+License: CC-BY-SA-4.0
+
+Files: etc/examples/illusionist/ambient_experiment.rb
+Copyright: Darin Wilson
+License: CC-BY-SA-4.0
+
+Files: etc/examples/sorcerer/bach.rb
+Copyright: Robin Newman
+License: CC-BY-SA-4.0
+
+Files: etc/samples/ambi_choir.flac
+Copyright: 2013 Exsomniel
+Source: http://freesound.org/people/Exsomniel/sounds/207809/
+License: CC0
+
+Files: etc/samples/ambi_dark_woosh.flac
+Copyright: 2006 EcoDTR
+Source: http://freesound.org/people/EcoDTR/sounds/27281/
+License: CC0
+
+Files: etc/samples/ambi_drone.flac
+Copyright: 2013 Autistic Lucario
+Source: http://freesound.org/people/Autistic%20Lucario/sounds/195341/
+License: CC0
+
+Files: etc/samples/ambi_glass_hum.flac
+Copyright: 2007 kaligari
+Source: http://freesound.org/people/kaligari/sounds/35391/
+License: CC0
+
+Files: etc/samples/ambi_glass_rub.flac
+Copyright: 2013 ani_music
+Source: http://freesound.org/people/ani_music/sounds/198403/
+License: CC0
+
+Files: etc/samples/ambi_haunted_hum.flac
+Copyright: 2007 kaligari
+Source: http://freesound.org/people/kaligari/sounds/35392/
+License: CC0
+
+Files: etc/samples/ambi_lunar_land.flac
+Copyright: 2012 maqsim
+Source: http://freesound.org/people/maqsim/sounds/172157/
+License: CC0
+
+Files: etc/samples/ambi_piano.flac
+Copyright: 2008 Rutger Muller <rutger@rutgermuller.nl>
+Source: http://freesound.org/people/RutgerMuller/sounds/51245/
+License: CC0
+
+Files: etc/samples/ambi_soft_buzz.flac
+Copyright: 2009 ludvique
+Source: http://freesound.org/people/ludvique/sounds/71852/
+License: CC0
+
+Files: etc/samples/ambi_swoosh.flac
+Copyright: 2012 Halgrimm
+Source: http://freesound.org/people/Halgrimm/sounds/169867/
+License: CC0
+
+Files: etc/samples/bass_dnb_f.flac
+Copyright: 2013 Exsomniel
+Source: http://freesound.org/people/Exsomniel/sounds/206134/
+License: CC0
+
+Files: etc/samples/bass_drop_c.flac
+Copyright: 2012 ani_music
+Source: http://freesound.org/people/ani_music/sounds/165320/
+License: CC0
+
+Files: etc/samples/bass_hard_c.flac
+Copyright: 2012 ani_music
+Source: http://freesound.org/people/ani_music/sounds/165309/
+License: CC0
+
+Files: etc/samples/bass_hit_c.flac
+Copyright: 2013 oceanictrancer
+Source: http://freesound.org/people/oceanictrancer/sounds/211614/
+License: CC0
+
+Files: etc/samples/bass_thick_c.flac
+Copyright: 2012 ani_music
+Source: http://freesound.org/people/ani_music/sounds/165314/
+License: CC0
+
+Files: etc/samples/bass_trance_c.flac
+Copyright: 2012 ani_music
+Source: http://freesound.org/people/ani_music/sounds/165329/
+License: CC0
+
+Files: etc/samples/bass_voxy_c.flac
+Copyright: 2012 ani_music
+Source: http://freesound.org/people/ani_music/sounds/165325/
+License: CC0
+
+Files: etc/samples/bass_voxy_hit_c.flac
+Copyright: 2012 ani_music
+Source: http://freesound.org/people/ani_music/sounds/165327/
+License: CC0
+
+Files: etc/samples/bass_woodsy_c.flac
+Copyright: 2012 ani_music
+Source: http://freesound.org/people/ani_music/sounds/165322/
+License: CC0
+
+Files: etc/samples/bd_808.flac
+Copyright: 2013 EKVelika
+Source: http://freesound.org/people/EKVelika/sounds/208447/
+License: CC0
+
+Files: etc/samples/bd_ada.flac
+Copyright: 2013 adammusic18
+Source: http://www.freesound.org/people/adammusic18/sounds/208871/
+License: CC0
+
+Files: etc/samples/bd_boom.flac
+Copyright: 2012 Snapper4298
+Source: http://freesound.org/people/Snapper4298/sounds/157245/
+License: CC0
+
+Files: etc/samples/bd_fat.flac
+Copyright: 2011 cubix
+Source: http://freesound.org/people/cubix/sounds/124386/
+License: CC0
+
+Files: etc/samples/bd_gas.flac
+Copyright: 2010 menegass
+Source: http://freesound.org/people/menegass/sounds/89460/
+License: CC0
+
+Files: etc/samples/bd_haus.flac
+Copyright: 2011 Rodrigo The Mad
+Source: http://freesound.org/people/Rodrigo%20The%20Mad/sounds/137722/
+License: CC0
+
+Files: etc/samples/bd_klub.flac
+Copyright: 2009 zgump
+Source: http://freesound.org/people/zgump/sounds/83262/
+License: CC0
+
+Files: etc/samples/bd_pure.flac
+Copyright: 2013 EKVelika
+Source: http://freesound.org/people/EKVelika/sounds/209571/
+License: CC0
+
+Files: etc/samples/bd_sone.flac
+Copyright: 2014 soneproject
+Source: http://freesound.org/people/soneproject/sounds/223090/
+License: CC0
+
+Files: etc/samples/bd_tek.flac
+Copyright: 2012 DWSD
+Source: http://freesound.org/people/DWSD/sounds/171104/
+License: CC0
+
+Files: etc/samples/bd_zome.flac
+Copyright: 2008 Dolfeus
+Source: http://freesound.org/people/Dolfeus/sounds/55231/
+License: CC0
+
+Files: etc/samples/bd_zum.flac
+Copyright: 2012 n1ghthawk
+Source: http://freesound.org/people/n1ghthawk/sounds/172124/
+License: CC0
+
+Files: etc/samples/drum_bass_hard.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100051/
+License: CC0
+
+Files: etc/samples/drum_bass_soft.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100052/
+License: CC0
+
+Files: etc/samples/drum_cowbell.flac
+Copyright: 2009 Neotone
+Source: http://freesound.org/people/Neotone/sounds/75338/
+License: CC0
+
+Files: etc/samples/drum_cymbal_closed.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100053/
+License: CC0
+
+Files: etc/samples/drum_cymbal_hard.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100056/
+License: CC0
+
+Files: etc/samples/drum_cymbal_open.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100055/
+License: CC0
+
+Files: etc/samples/drum_cymbal_pedal.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100054/
+License: CC0
+
+Files: etc/samples/drum_cymbal_soft.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100057/
+License: CC0
+
+Files: etc/samples/drum_heavy_kick.flac
+Copyright: 2005 Zajo
+Source: http://freesound.org/people/Zajo/sounds/4832/
+License: CC0
+
+Files: etc/samples/drum_roll.flac
+Copyright: 2006 Heigh-hoo
+Source: http://freesound.org/people/Heigh-hoo/sounds/19433/
+License: CC0
+
+Files: etc/samples/drum_snare_hard.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100058/
+License: CC0
+
+Files: etc/samples/drum_snare_soft.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100059/
+License: CC0
+
+Files: etc/samples/drum_splash_hard.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100060/
+License: CC0
+
+Files: etc/samples/drum_splash_soft.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100061/
+License: CC0
+
+Files: etc/samples/drum_tom_hi_hard.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100062/
+License: CC0
+
+Files: etc/samples/drum_tom_hi_soft.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100063/
+License: CC0
+
+Files: etc/samples/drum_tom_lo_hard.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100064/
+License: CC0
+
+Files: etc/samples/drum_tom_lo_soft.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100065/
+License: CC0
+
+Files: etc/samples/drum_tom_mid_hard.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100066/
+License: CC0
+
+Files: etc/samples/drum_tom_mid_soft.flac
+Copyright: 2010 menegass
+Source: http://www.freesound.org/people/menegass/sounds/100067/
+License: CC0
+
+Files: etc/samples/elec_beep.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13126/
+License: CC0
+
+Files: etc/samples/elec_bell.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13116/
+License: CC0
+
+Files: etc/samples/elec_blip2.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13120/
+License: CC0
+
+Files: etc/samples/elec_blip.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13121/
+License: CC0
+
+Files: etc/samples/elec_blup.flac
+Copyright: 2005 looppool
+Source:  http://www.freesound.org/people/looppool/sounds/13092/
+License: CC0
+
+Files: etc/samples/elec_bong.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13137/
+License: CC0
+
+Files: etc/samples/elec_chime.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13138/
+License: CC0
+
+Files: etc/samples/elec_cymbal.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13143/
+License: CC0
+
+Files: etc/samples/elec_filt_snare.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13141/
+License: CC0
+
+Files: etc/samples/elec_flip.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13114/
+License: CC0
+
+Files: etc/samples/elec_fuzz_tom.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13140/
+License: CC0
+
+Files: etc/samples/elec_hi_snare.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13125/
+License: CC0
+
+Files: etc/samples/elec_hollow_kick.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13099/
+License: CC0
+
+Files: etc/samples/elec_lo_snare.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13145/
+License: CC0
+
+Files: etc/samples/elec_mid_snare.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13132/
+License: CC0
+
+Files: etc/samples/elec_ping.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13119/
+License: CC0
+
+Files: etc/samples/elec_plip.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13093/
+License: CC0
+
+Files: etc/samples/elec_pop.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13134/
+License: CC0
+
+Files: etc/samples/elec_snare.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13146/
+License: CC0
+
+Files: etc/samples/elec_soft_kick.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13142/
+License: CC0
+
+Files: etc/samples/elec_tick.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13113/
+License: CC0
+
+Files: etc/samples/elec_triangle.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13147/
+License: CC0
+
+Files: etc/samples/elec_twang.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13136/
+License: CC0
+
+Files: etc/samples/elec_twip.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13094/
+License: CC0
+
+Files: etc/samples/elec_wood.flac
+Copyright: 2005 looppool
+Source: http://www.freesound.org/people/looppool/sounds/13135/
+License: CC0
+
+Files: etc/samples/guit_e_fifths.flac
+Copyright: 2008 Sub-d
+Source: http://freesound.org/people/Sub-d/sounds/46990/
+License: CC0
+
+Files: etc/samples/guit_em9.flac
+Copyright: 2008 Sub-d
+Source: http://www.freesound.org/people/Sub-d/sounds/46992/
+License: CC0
+
+Files: etc/samples/guit_e_slide.flac
+Copyright: 2005 Suva
+Source: http://freesound.org/people/Suva/sounds/2410/
+License: CC0
+
+Files: etc/samples/guit_harmonics.flac
+Copyright: 2012 BStateham
+Source: http://freesound.org/people/BStateham/sounds/141524/
+License: CC0
+
+Files: etc/samples/loop_amen_full.flac
+Copyright: 2013 gowers
+Source: http://freesound.org/people/gowers/sounds/202537/
+License: CC0
+
+Files: etc/samples/loop_amen.flac
+Copyright: 2007 Dolfeus
+Source: http://freesound.org/people/Dolfeus/sounds/43389/
+License: CC0
+
+Files: etc/samples/loop_breakbeat.flac
+Copyright: 2012 Snapper4298
+Source: http://freesound.org/people/Snapper4298/sounds/160354/
+License: CC0
+
+Files: etc/samples/loop_compus.flac
+Copyright: 2013 godspine
+Source: http://freesound.org/people/godspine/sounds/212288/
+License: CC0
+
+Files: etc/samples/loop_garzul.flac
+Copyright: 2014 Garzul
+http://freesound.org/people/Garzul/sounds/213524/
+License: CC0
+
+Files: etc/samples/loop_industrial.flac
+Copyright: 2014 godspine
+Source: http://freesound.org/people/godspine/sounds/222072/
+License: CC0
+
+Files: etc/samples/loop_mika.flac
+Copyright: 2013 mika55
+Source: http://freesound.org/people/mika55/sounds/188551/
+License: CC0
+
+Files: etc/samples/loop_safari.flac
+Copyright: 2015 nemaavla
+Source: http://freesound.org/people/nemaavla/sounds/318759/
+License: CC0
+
+Files: etc/samples/loop_tabla.flac
+Copyright: 2015 lezaarth
+Source: http://freesound.org/people/lezaarth/sounds/242591/
+License: CC0
+
+Files: etc/samples/misc_cineboom.flac
+Copyright: 2013 Northern_Monkey
+Source: http://freesound.org/people/Northern_Monkey/sounds/177242/
+License: CC0
+
+Files: etc/samples/misc_crow.flac
+Copyright: 2008 davidworksonline
+Source: http://freesound.org/people/davidworksonline/sounds/54973/
+License: CC0
+
+Files: etc/samples/misc_burp.flac
+Copyright: 2014 anas76
+Source: http://freesound.org/people/anas76/sounds/222022/
+License: CC0
+
+Files: etc/samples/perc_bell.flac
+Copyright: 2014 AlaskaRobotics
+Source: http://freesound.org/people/AlaskaRobotics/sounds/221515/
+License: CC0
+
+Files: etc/samples/perc_snap.flac
+Copyright: 2010 SoundCollectah
+Source: http://www.freesound.org/people/SoundCollectah/sounds/109400/
+License: CC0
+
+Files: etc/samples/perc_snap2.flac
+Copyright: 2012 Peram
+Source: http://www.freesound.org/people/Peram/sounds/158615/
+License: CC0
+
+Files: etc/samples/perc_swash.flac
+Copyright: 2008 qubodup
+Source: http://freesound.org/people/qubodup/sounds/60009/
+License: CC0
+
+Files: etc/samples/perc_till.flac
+Copyright: 2013 Zott820
+Source: http://freesound.org/people/Zott820/sounds/209578/
+License: CC0
+
+Files: etc/samples/sn_dolf.flac
+Copyright: 2008 Dolfeus
+Source: http://freesound.org/people/Dolfeus/sounds/57534/
+License: CC0
+
+Files: etc/samples/sn_dub.flac
+Copyright: 2013 Adriak909
+Source:  http://freesound.org/people/Adriak909/sounds/173142/
+License: CC0
+
+Files: etc/samples/sn_zome.flac
+Copyright: 2008 Dolfeus
+Source: http://freesound.org/people/Dolfeus/sounds/55232/
+License: CC0
+
+Files: etc/samples/tabla_dhec.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130407/
+License: CC0
+
+Files: etc/samples/tabla_ghe1.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130406/
+License: CC0
+
+Files: etc/samples/tabla_ghe2.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130405/
+License: CC0
+
+Files: etc/samples/tabla_ghe3.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130404/
+License: CC0
+
+Files: etc/samples/tabla_ghe4.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130411/
+License: CC0
+
+Files: etc/samples/tabla_ghe5.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130410/
+License: CC0
+
+Files: etc/samples/tabla_ghe6.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130409/
+License: CC0
+
+Files: etc/samples/tabla_ghe7.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130408/
+License: CC0
+
+Files: etc/samples/tabla_ghe8.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130414/
+License: CC0
+
+Files: etc/samples/tabla_ke1.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130413/
+License: CC0
+
+Files: etc/samples/tabla_ke2.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130424/
+License: CC0
+
+Files: etc/samples/tabla_ke3.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130423/
+License: CC0
+
+Files: etc/samples/tabla_na.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130421/
+License: CC0
+
+Files: etc/samples/tabla_na_o.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130422/
+License: CC0
+
+Files: etc/samples/tabla_na_s.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130428/
+License: CC0
+
+Files: etc/samples/tabla_re.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130427/
+License: CC0
+
+Files: etc/samples/tabla_tas1.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130427/
+License: CC0
+
+Files: etc/samples/tabla_tas2.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130425/
+License: CC0
+
+Files: etc/samples/tabla_tas3.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130430/
+License: CC0
+
+Files: etc/samples/tabla_te1.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130429/
+License: CC0
+
+Files: etc/samples/tabla_te2.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130418/
+License: CC0
+
+Files: etc/samples/tabla_te_m.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130415/
+License: CC0
+
+Files: etc/samples/tabla_te_ne.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130417/
+License: CC0
+
+Files: etc/samples/tabla_tun1.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130416/
+License: CC0
+
+Files: etc/samples/tabla_tun2.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130419/
+License: CC0
+
+Files: etc/samples/tabla_tun3.flac
+Copyright: 2011 dio_333
+Source: http://freesound.org/people/dio_333/sounds/130420/
+License: CC0
+
+Files: etc/samples/vinyl_backspin.flac
+Copyright: 2013 il112
+Source: http://freesound.org/people/il112/sounds/182316/
+License: CC0
+
+Files: etc/samples/vinyl_hiss.flac
+Copyright: 2011 veezay
+Source: http://freesound.org/people/veezay/sounds/130393/
+License: CC0
+
+Files: etc/samples/vinyl_rewind.flac
+Copyright: 2012 TasmanianPower
+Source: http://freesound.org/people/TasmanianPower/sounds/162493/
+License: CC0
+
+Files: etc/samples/vinyl_scratch.flac
+Copyright: 2007 hello_flowers
+Source: http://freesound.org/people/hello_flowers/sounds/28681/
+License: CC0
+
+Files: app/gui/qt/osc/udp.hh
+       app/gui/qt/osc/oscpkt.hh
+Copyright: 2010, Julien Pommier
+License: Zlib
+
+Files: app/server/ruby/vendor/ruby-beautify/*
+Copyright: 2012 Ernie Brodeur
+Source: https://github.com/erniebrodeur/ruby-beautify/tree/v0.92.2
+License: MIT
+
+Files: debian/*
+Copyright: 2016 Hanno Zulla <kontakt@hanno.de>
+Source: https://github.com/arirusso/alsa-rawmidi
+License: MIT
+
+License: MIT
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation
+ files (the "Software"), to deal in the Software without
+ restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following
+ conditions:
+ .
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+
+License: CC-BY-SA-4.0
+ You are free to:
+ .
+ Share - copy and redistribute the material in any medium or format
+ Adapt - remix, transform, and build upon the material
+ .
+ Under the following terms:
+ .
+ Attribution - You must give appropriate credit, provide a link to the
+ license, and indicate if changes were made. You may do so in any
+ reasonable manner, but not in any way that suggests the licensor
+ endorses you or your use. 
+ .
+ ShareAlike - If you remix, transform, or build upon the material, you
+ must distribute your contributions under the same license as the
+ original.
+ .
+ No additional restrictions - You may not apply legal terms or
+ technological measures that legally restrict others from doing
+ anything the license permits.
+ .
+ For more information, see
+ http://creativecommons.org/licenses/by-sa/4.0/
+
+License: CC0
+ Statement of Purpose
+ .
+ The laws of most jurisdictions throughout the world automatically
+ confer exclusive Copyright and Related Rights (defined below) upon the
+ creator and subsequent owner(s) (each and all, an "owner") of an
+ original work of authorship and/or a database (each, a "Work").
+ .
+ Certain owners wish to permanently relinquish those rights to a Work
+ for the purpose of contributing to a commons of creative, cultural and
+ scientific works ("Commons") that the public can reliably and without
+ fear of later claims of infringement build upon, modify, incorporate
+ in other works, reuse and redistribute as freely as possible in any
+ form whatsoever and for any purposes, including without limitation
+ commercial purposes. These owners may contribute to the Commons to
+ promote the ideal of a free culture and the further production of
+ creative, cultural and scientific works, or to gain reputation or
+ greater distribution for their Work in part through the use and efforts
+ of others.
+ .
+ For these and/or other purposes and motivations, and without any
+ expectation of additional consideration or compensation, the person
+ associating CC0 with a Work (the "Affirmer"), to the extent that he or
+ she is an owner of Copyright and Related Rights in the Work,
+ voluntarily elects to apply CC0 to the Work and publicly distribute
+ the Work under its terms, with knowledge of his or her Copyright and
+ Related Rights in the Work and the meaning and intended legal effect
+ of CC0 on those rights.
+ .
+ 1. Copyright and Related Rights. A Work made available under CC0 may
+ be protected by copyright and related or neighboring rights ("Copyright
+ and Related Rights"). Copyright and Related Rights include, but are not
+ limited to, the following:
+ .
+ - the right to reproduce, adapt, distribute, perform, display,
+   communicate, and translate a Work;
+ .
+ - moral rights retained by the original author(s) and/or performer(s);
+ .
+ - publicity and privacy rights pertaining to a person's image or
+   likeness depicted in a Work;
+ .
+ - rights protecting against unfair competition in regards to a Work,
+   subject to the limitations in paragraph 4(a), below;
+ .
+ - rights protecting the extraction, dissemination, use and reuse of
+   data in a Work;
+ .
+ - database rights (such as those arising under Directive 96/9/EC of
+   the European Parliament and of the Council of 11 March 1996 on the
+   legal protection of databases, and under any national implementation
+   thereof, including any amended or successor version of such
+   directive); and
+ .
+ - other similar, equivalent or corresponding rights throughout the
+   world based on applicable law or treaty, and any national
+   implementations thereof.
+ .
+ 2. Waiver. To the greatest extent permitted by, but not in
+ contravention of, applicable law, Affirmer hereby overtly, fully,
+ permanently, irrevocably and unconditionally waives, abandons, and
+ surrenders all of Affirmer's Copyright and Related Rights and
+ associated claims and causes of action, whether now known or unknown
+ (including existing as well as future claims and causes of action), in
+ the Work (i) in all territories worldwide, (ii) for the maximum
+ duration provided by applicable law or treaty (including future time
+ extensions), (iii) in any current or future medium and for any number
+ of copies, and (iv) for any purpose whatsoever, including without
+ limitation commercial, advertising or promotional purposes (the
+ "Waiver"). Affirmer makes the Waiver for the benefit of each member of
+ the public at large and to the detriment of Affirmer's heirs and
+ successors, fully intending that such Waiver shall not be subject to
+ revocation, rescission, cancellation, termination, or any other legal
+ or equitable action to disrupt the quiet enjoyment of the Work by the
+ public as contemplated by Affirmer's express Statement of Purpose.
+ .
+ 3. Public License Fallback. Should any part of the Waiver for any
+ reason be judged legally invalid or ineffective under applicable law,
+ then the Waiver shall be preserved to the maximum extent permitted
+ taking into account Affirmer's express Statement of Purpose. In
+ addition, to the extent the Waiver is so judged Affirmer hereby grants
+ to each affected person a royalty-free, non transferable, non
+ sublicensable, non exclusive, irrevocable and unconditional license to
+ exercise Affirmer's Copyright and Related Rights in the Work (i) in
+ all territories worldwide, (ii) for the maximum duration provided by
+ applicable law or treaty (including future time extensions), (iii)
+ in any current or future medium and for any number of copies, and
+ (iv) for any purpose whatsoever, including without limitation
+ commercial, advertising or promotional purposes (the "License"). The
+ License shall be deemed effective as of the date CC0 was applied by
+ Affirmer to the Work. Should any part of the License for any reason
+ be judged legally invalid or ineffective under applicable law, such
+ partial invalidity or ineffectiveness shall not invalidate the
+ remainder of the License, and in such case Affirmer hereby affirms
+ that he or she will not (i) exercise any of his or her remaining
+ Copyright and Related Rights in the Work or (ii) assert any
+ associated claims and causes of action with respect to the Work, in
+ either case contrary to Affirmer's express Statement of Purpose.
+ .
+ 4. Limitations and Disclaimers.
+ .
+ - No trademark or patent rights held by Affirmer are waived,
+   abandoned, surrendered, licensed or otherwise affected by this
+   document.
+ .
+ - Affirmer offers the Work as-is and makes no representations or
+   warranties of any kind concerning the Work, express, implied,
+   statutory or otherwise, including without limitation warranties of
+   title, merchantability, fitness for a particular purpose, non
+   infringement, or the absence of latent or other defects, accuracy,
+   or the present or absence of errors, whether ornot discoverable, all
+   to the greatest extent permissible under applicable law.
+ .
+ - Affirmer disclaims responsibility for clearing rights of other
+   persons that may apply to the Work or any use thereof, including
+   without limitation any person's Copyright and Related Rights in the
+   Work. Further, Affirmer disclaims responsibility for obtaining any
+   necessary consents, permissions or other rights required for any
+   use of the Work.
+ .
+ - Affirmer understands and acknowledges that Creative Commons is not
+   a party to this document and has no duty or obligation with respect
+   to this CC0 or use of the Work.
+ .
+ For more information, see
+ https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+License: Zlib
+ This software is provided 'as-is', without any express or implied
+ warranty.  In no event will the authors be held liable for any
+ damages arising from the use of this software.
+ .
+ Permission is granted to anyone to use this software for any purpose,
+ including commercial applications, and to alter it and redistribute
+ it freely, subject to the following restrictions:
+ .
+ 1. The origin of this software must not be misrepresented; you must not
+    claim that you wrote the original software. If you use this software
+    in a product, an acknowledgment in the product documentation would be
+    appreciated but is not required.
+ 2. Altered source versions must be plainly marked as such, and must not be
+    misrepresented as being the original software.
+ 3. This notice may not be removed or altered from any source distribution.

@@ -1,0 +1,13 @@
+app/server/ruby/*.rb                                               usr/lib/sonic-pi/app/server/ruby
+app/server/ruby/bin                                                usr/lib/sonic-pi/app/server/ruby
+app/server/ruby/lib                                                usr/lib/sonic-pi/app/server/ruby
+app/server/ruby/vendor/ruby-beautify/lib/ruby-beautify-legacy.rb   usr/lib/sonic-pi/app/server/ruby/vendor/ruby-beautify/lib/
+app/server/ruby/vendor/ruby-beautify/lib/ruby-beautify-legacy      usr/lib/sonic-pi/app/server/ruby/vendor/ruby-beautify/lib/
+
+app/server/erlang/*.beam                                           usr/lib/sonic-pi/app/server/erlang
+
+etc/examples                                                       usr/share/sonic-pi
+etc/snippets                                                       usr/share/sonic-pi
+etc/synthdefs/compiled                                             usr/share/sonic-pi/synthdefs
+
+debian/extra/README-JACKD                                          usr/share/doc/sonic-pi

@@ -1,0 +1,16 @@
+Description: Ruby fails to start with frozen strings
+Forwarded: not-needed
+Author: Valentin Vidic <vvidic@debian.org>
+Last-Update: 2020-09-20
+
+--- a/app/gui/qt/mainwindow.cpp
++++ b/app/gui/qt/mainwindow.cpp
+@@ -1075,7 +1075,7 @@
+     serverProcess = new QProcess();
+ 
+     QStringList args;
+-    args << "--enable-frozen-string-literal" << "-E" << "utf-8";
++    args << "-E" << "utf-8";
+     args << ruby_server_path;
+ 
+ 

@@ -1,0 +1,52 @@
+#!/usr/bin/make -f
+
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/default.mk
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+include /usr/share/dpkg/buildflags.mk
+export QT_SELECT = qt5
+
+%:
+	dh $@ --buildsystem=cmake --sourcedirectory=app/gui/qt --builddirectory=app/gui/qt
+
+# This is based on upstream's Raspbian builder script app/gui/qt/rp-build-app
+
+override_dh_auto_configure:
+	chmod 755 app/server/ruby/bin/port-discovery.rb
+	chmod 755 app/server/ruby/bin/sonic-pi-server.rb
+	cd app/server/ruby/vendor/ruby-beautify/lib && \
+	  cp    ruby-beautify.rb ruby-beautify-legacy.rb && \
+	  cp -r ruby-beautify    ruby-beautify-legacy && \
+	  chmod 644 ruby-beautify-legacy.rb ruby-beautify-legacy/*.rb ruby-beautify-legacy/config/*.rb
+	cd app/gui/qt/utils && \
+	  cp -f ruby_help.tmpl ruby_help.h && \
+	  ../../../server/ruby/bin/qt-doc.rb -o ruby_help.h
+	cmake app/gui/qt
+	lrelease app/gui/qt/lang/*.ts
+	cd app/server/erlang && \
+	  erlc osc.erl pi_server.erl
+	dh_auto_configure
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	cd app/server/ruby/test ; \
+	  ruby -e 'require "ruby_debian_dev"; include RubyDebianDev; SUPPORTED_RUBY_VERSIONS.each { |v, b| system("#{b} /usr/bin/rake test") or raise "test failed for #{v}" }'
+	dh_auto_test
+endif
+
+override_dh_clean:
+	if [ -e app/gui/qt/Makefile ]; then \
+	    make -C app/gui/qt/Makefile clean; \
+	  fi ;
+	rm -rf \
+	  app/server/ruby/vendor/ruby-beautify/lib/ruby-beautify-legacy.rb \
+	  app/server/ruby/vendor/ruby-beautify/lib/ruby-beautify-legacy \
+	  app/gui/qt/sonic-pi \
+	  app/gui/qt/Makefile \
+	  app/gui/qt/ruby_help.h \
+	  app/gui/qt/help_files.qrc \
+	  app/gui/qt/lang/*.qm \
+	  app/gui/qt/book/ \
+	  app/gui/qt/help/ \
+	  app/gui/qt/info/
+	dh_clean

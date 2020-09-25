@@ -1,0 +1,5 @@
+Depends: sonic-pi-server
+Tests: server
+
+Depends: sonic-pi, x11-utils, xvfb
+Tests: gui

@@ -1,0 +1,27 @@
+Description: Update file locations for Debian packaging
+Forwarded: not-needed
+Author: Valentin Vidic <vvidic@debian.org>
+Last-Update: 2020-09-20
+
+--- a/app/server/ruby/lib/sonicpi/util.rb
++++ b/app/server/ruby/lib/sonicpi/util.rb
+@@ -256,7 +256,7 @@
+     end
+ 
+     def etc_path
+-      File.absolute_path("#{root_path}/etc")
++      File.exist?(File.absolute_path("#{root_path}/etc")) ? File.absolute_path("#{root_path}/etc") : "/usr/share/sonic-pi"
+     end
+ 
+     def snippets_path
+--- a/app/server/ruby/core.rb
++++ b/app/server/ruby/core.rb
+@@ -100,7 +100,7 @@
+   module Core
+     module SPRand
+       # Read in same random numbers as server for random stream sync
+-      @@random_numbers = ::WaveFile::Reader.new(File.expand_path("../../../../etc/buffers/rand-stream.wav", __FILE__), ::WaveFile::Format.new(:mono, :float, 44100)).read(441000).samples.freeze
++      @@random_numbers = ::WaveFile::Reader.new(File.exist?(File.expand_path("../../../../etc/buffers/rand-stream.wav", __FILE__)) ? File.expand_path("../../../../etc/buffers/rand-stream.wav", __FILE__) : "/usr/share/sonic-pi/buffers/rand-stream.wav", ::WaveFile::Format.new(:mono, :float, 44100)).read(441000).samples.freeze
+ 
+       def self.tl_seed_map(seed, idx=0)
+         {:sonic_pi_spider_random_gen_seed => seed,

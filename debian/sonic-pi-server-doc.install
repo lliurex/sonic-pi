@@ -1,0 +1,12 @@
+app/gui/qt/book/*.html                                           usr/share/doc/sonic-pi/tutorial/
+app/gui/qt/theme/light/doc-styles.css                            usr/share/doc/sonic-pi/theme/light
+app/gui/qt/images/tutorial/env-attack-decay-sustain-release.png  usr/share/doc/sonic-pi/images/tutorial
+app/gui/qt/images/tutorial/env-attack-release.png                usr/share/doc/sonic-pi/images/tutorial
+app/gui/qt/images/tutorial/env-attack-sustain-release.png        usr/share/doc/sonic-pi/images/tutorial
+app/gui/qt/images/tutorial/env-decay-level-2.png                 usr/share/doc/sonic-pi/images/tutorial
+app/gui/qt/images/tutorial/env-decay-level.png                   usr/share/doc/sonic-pi/images/tutorial
+app/gui/qt/images/tutorial/env-long-attack-short-release.png     usr/share/doc/sonic-pi/images/tutorial
+app/gui/qt/images/tutorial/env-release.png                       usr/share/doc/sonic-pi/images/tutorial
+app/gui/qt/images/tutorial/env-short-attack-short-release.png    usr/share/doc/sonic-pi/images/tutorial
+app/gui/qt/images/tutorial/GUI.png                               usr/share/doc/sonic-pi/images/tutorial
+app/gui/qt/images/tutorial/sample.png                            usr/share/doc/sonic-pi/images/tutorial

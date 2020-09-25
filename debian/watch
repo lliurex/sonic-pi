@@ -1,0 +1,3 @@
+version=3
+opts=dversionmangle=s/\~repack$//,filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/sonic-pi-$1\.tar\.gz/,repacksuffix=~repack \
+  https://github.com/samaaron/sonic-pi/tags .*/v?(\d\S*)\.tar\.gz

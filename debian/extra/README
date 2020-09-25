@@ -1,0 +1,246 @@
+                                           ╘
+                                    ─       ╛▒╛
+                                     ▐╫       ▄█├
+                              ─╟╛      █▄      ╪▓▀
+                    ╓┤┤┤┤┤┤┤┤┤  ╩▌      ██      ▀▓▌
+                     ▐▒   ╬▒     ╟▓╘    ─▓█      ▓▓├
+                     ▒╫   ▒╪      ▓█     ▓▓─     ▓▓▄
+                    ╒▒─  │▒       ▓█     ▓▓     ─▓▓─
+                    ╬▒   ▄▒ ╒    ╪▓═    ╬▓╬     ▌▓▄
+                    ╥╒   ╦╥     ╕█╒    ╙▓▐     ▄▓╫
+                               ▐╩     ▒▒      ▀▀
+                                    ╒╪      ▐▄
+             
+                 _____             __        ____  __
+                / ___/____  ____  /_/____   / __ \/_/
+                \__ \/ __ \/ __ \/ / ___/  / /_/ / /
+               ___/ / /_/ / / / / / /__   / ____/ /
+              /____/\____/_/ /_/_/\___/  /_/   /_/
+
+
+# The Live Coding Synth for Everyone.
+
+Sonic Pi is a *new kind of musical instrument*. Instead of strumming
+strings or whacking things with sticks - you write code - LIVE.
+
+Sonic Pi has been designed with the aim to find a harmonious balance
+between three core principles:
+
+* SIMPLE enough for the 10 year old within you
+* JOYFUL enough for you to lose yourself through play
+* POWERFUL enough for your own expressions
+
+Sonic Pi is a complete open source programming environment originally
+designed to explore and *teach programming concepts* within schools
+through the process of creating *new sounds*. 
+
+In addition to being an engaging education resource it has evolved into 
+an *extremely powerful* and performance-ready *live coding instrument*
+suitable for professional artists and DJs.
+
+Whilst Education is a core focus it now sits at the intersection
+between three core domains:
+
+* ART        - providing the means to express yourself and ask
+               new questions of music and notation
+* TECHNOLOGY - exploring questions related to liveness, time and
+               concurrency in programming languages
+* EDUCATION  - demonstrating that open play rather than rigid structures
+               increases motivation and engagement in the classroom
+
+Again, finding a balance working to the best benefits of all these
+domains is the objective.
+
+
+* Info & Latest Releases: http://sonic-pi.net
+  
+* Source: https://github.com/samaaron/sonic-pi
+
+* Computing Education Resources for Schools:
+  http://www.raspberrypi.org/learning/sonic-pi-lessons/
+  
+* Music Education Toolkit for Schools:
+  http://sonicpiliveandcoding.com
+
+# Acknowledgements
+
+Sonic Pi has been developed within the Computer Laboratory at the
+University of Cambridge with kind support from the Raspberry Pi
+Foundation and the Broadcom Foundation.
+
+# Translations
+
+Sonic Pi's built in tutorial has been translated into several
+languages thanks to the awesome work of several contributors.
+
+Would you like to contribute a translation too? If so, please take a
+look at our translation docs at
+https://github.com/samaaron/sonic-pi/blob/master/TRANSLATION.md
+to get started.
+
+# Information for developers
+
+Sonic Pi is under active development, and welcomes new contributors.
+Please read https://github.com/samaaron/sonic-pi/blob/master/README.md
+for more information.
+
+# Core Team
+
+Meet the Sonic Pi Core Team - a dedicated group of live coders, working
+hard to bring you exciting new features, sounds and music making
+possibilities.
+
+- Sam Aaron
+
+  University of Cambridge Computer Labs researcher.
+
+  Performing as
+  Sam Aaron http://facebook.com/livecodersamaaron
+  Poly Core http://twitter.com/poly_core
+  Fib Crisis http://twitter.com/fib_crisis
+
+  https://twitter.com/samaaron
+  https://github.com/samaaron
+
+- Xavier Riley
+
+  Jazz guitarist, double bassist and music graduate who writes Ruby
+  code for a living.
+ 
+  https://twitter.com/xavriley
+  https://github.com/xavriley
+
+- Jeremy Weatherford
+
+  Composer of algorithms, musical and otherwise. Builder of musical
+  contraptions.
+  
+  http://hackaday.io/project/3033-stepper-music-box
+  http://hackaday.io/project/3533-christmas-orchestra
+
+  Performing as jweather https://soundcloud.com/jweather/
+
+  https://twitter.com/weatherfnord
+  https://github.com/jweather
+
+- Joseph Wilk
+
+  Programmer and live coder of sound, light and poetry.
+
+  Performing as http://www.repl-electric.com/
+
+  https://twitter.com/josephwilk
+  https://github.com/josephwilk
+
+- Hanno Zulla
+
+  Linux whizz and friend of i18n. Helping to bring Sonic Pi to
+  your native tongue and to your Debian desktop.
+
+  https://twitter.com/hzulla
+  https://github.com/hzulla
+
+# Contributors
+
+Support and Advice
+
+Thanks to the following people for their generous support (both
+technical and otherwise) with time, advice, and wisdom:
+
+- Carrie Anne Philbin
+- Robert Mullins
+- Alex Bradbury
+- Alan Blackwell
+- Rachel Drury
+- Juneau Projects
+- Stephan Lachowsky
+- Paul Winstanley
+- Robin Newman
+
+Organisations
+
+The following organisations have kindly contributed to Sonic Pi:
+
+- The Raspberry Pi Foundation
+- The Broadcom Foundation
+- The University of Cambridge Computer Laboratory
+- Nesta
+
+Developer Contributions
+
+In addition to the Sonic Pi Core Team, I'd like to give my thanks to the
+following developers who have donated their time and effort to help grow
+and improve the Sonic Pi code base:
+
+- Ethan Crawford
+- Łukasz Siwiński
+- Martin Keegan
+- Kenichi Kanai
+- Nicolas Dermine
+- Ricardo Pozo
+- Robin Newman
+- Wolfgang Werner
+- Clare Macrae
+- Jeroen Castelein
+- G. Martin Butz
+- Hannes Fritz
+- Petter Reinholdtsen
+- Marco Giordano
+- Keiko Machiya
+- Franz Laügt
+- Sébastien Rannou
+- Frobby
+- Martin Zeilinger
+- Steve Traylen
+- Christoph B. Wurzinger
+- Jose Añasco
+- Michel Echevres
+- Mistral Contrastin
+- Chris Ford
+- Bruce Adams
+- Ben Nuttall
+- Daniel Canelhas
+- Katie Miller
+- Michael Henry
+- Will Stephenson
+- Eugene Kovalev
+- Serge Stinckwich
+- Sebastian Stahn
+- Joseph Haig
+- Graham Taylor
+- Ivan Zarea
+- Siim Põder
+- Cosmin Stroe
+- Tomek Rabczak
+- Brujo Rojas
+- Mateusz Bielec
+- Tom den Braber
+- Karl Hiner
+- Pierre De Wilde
+- Ryan Bigg
+- James Smith
+- Tom Holford
+- Russell Jones
+- Marko Peltola
+- Hrafnkell Eiríksson
+- Michel Kraaijeveld
+- Enrike Hurtado
+- John Lawrence Aspden
+- Sandy Maguire
+- Tomasz Nurkiewicz
+- Morgan Owens
+- Christian Perfect
+- Matthias Cavigelli
+- Ruzsa Balázs
+- Emlyn Corrin
+- Alex McLean
+- Aspasia Beneti
+- Nigel Michki
+- Michael Fulton
+- Scott Kitterman
+- András Németh
+
+# Changelog
+
+The project changelog can be found at
+https://github.com/samaaron/sonic-pi/blob/master/CHANGELOG.md

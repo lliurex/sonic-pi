@@ -1,0 +1,20 @@
+Description: ruby-aubio import path changed
+Forwarded: not-needed
+Author: Valentin Vidic <vvidic@debian.org>
+Last-Update: 2020-09-20
+
+--- a/app/server/ruby/lib/sonicpi/samplebuffer.rb
++++ b/app/server/ruby/lib/sonicpi/samplebuffer.rb
+@@ -14,7 +14,11 @@
+ require_relative "buffer"
+ require_relative "util"
+ require_relative "sox"
+-require 'aubio'
++begin
++  require 'aubio'
++rescue LoadError
++  require 'ruby_aubio'
++end
+ 
+ 
+ module SonicPi

@@ -1,0 +1,2 @@
+# upstream doesn't sign its releases, at least not yet.
+debian-watch-may-check-gpg-signature

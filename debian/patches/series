@@ -1,0 +1,8 @@
+03-use-debian-gems.patch
+04-rename-ruby-beautify-legacy.patch
+05-doc-base-index.patch
+06-paths.patch
+07-examples-path.patch
+08-frozen-string.patch
+09-qtscintilla2.patch
+10-require-aubio.patch
