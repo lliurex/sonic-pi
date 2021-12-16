@@ -1,3 +1,9 @@
+sonic-pi (3.2.2~repack-3) focal; urgency=medium
+
+  * Focal port
+
+ -- M.Angel Juan <m.angel.juan@gmail.com>  Thu, 16 Dec 2021 11:30:13 +0100
+
 sonic-pi (3.2.2~repack-2) bionic; urgency=medium
 
   * Bionic port from debian
